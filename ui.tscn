@@ -12,7 +12,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	self.text = \"Gold: \" + str(Game.Gold)
 "
 
@@ -20,7 +20,7 @@ func _process(delta):
 script/source = "extends Label
 
 
-func _process(delta):
+func _process(_delta):
 	self.text = \"HP: \" + str(Game.Health)
 "
 
@@ -32,6 +32,7 @@ offset_right = 3584.0
 offset_bottom = 2048.0
 
 [node name="TowerContainer" type="VFlowContainer" parent="Panel"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
 offset_right = 235.0
@@ -41,15 +42,13 @@ theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 
 [node name="RedTowerPanel" parent="Panel/TowerContainer" instance=ExtResource("2_5wnq8")]
-offset_bottom = 80.0
+layout_mode = 2
 
 [node name="RedTowerPanel2" parent="Panel/TowerContainer" instance=ExtResource("2_5wnq8")]
-offset_top = 90.0
-offset_bottom = 170.0
+layout_mode = 2
 
 [node name="RedTowerPanel3" parent="Panel/TowerContainer" instance=ExtResource("2_5wnq8")]
-offset_top = 180.0
-offset_bottom = 260.0
+layout_mode = 2
 
 [node name="Gold" type="Label" parent="."]
 offset_left = 512.0
