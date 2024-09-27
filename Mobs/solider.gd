@@ -13,7 +13,7 @@ func _physics_process(delta):
 		
 	if Health <= 0:
 		death()
-		Game.Gold += 1 randi_range ( 1,5 )
+		Game.Gold += randi_range ( 1,5 )
 	
 func death():
 	get_parent().get_parent().queue_free()
