@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://jn2rceiqhdmc"]
+[gd_scene load_steps=7 format=3 uid="uid://bbb71oywqo60h"]
 
-[ext_resource type="Script" path="res://Mobs/solider.gd" id="1_0wax5"]
-[ext_resource type="Texture2D" uid="uid://dbfspariweuj2" path="res://tower-defense-top-down/PNG/Default size/towerDefense_tile245.png" id="1_t12l6"]
+[ext_resource type="Script" path="res://Mobs/solider2.gd" id="1_mmh33"]
+[ext_resource type="Texture2D" uid="uid://dbfspariweuj2" path="res://tower-defense-top-down/PNG/Default size/towerDefense_tile245.png" id="2_kf1r5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nkuh"]
 
@@ -22,12 +22,14 @@ func _process(_delta):
 	self.value = get_parent().Health
 "
 
-[node name="Solider A" type="CharacterBody2D"]
+[node name="Solider 2" type="CharacterBody2D"]
+modulate = Color(0.845502, 0.136149, 0.567906, 1)
 scale = Vector2(3, 3)
-script = ExtResource("1_0wax5")
+script = ExtResource("1_mmh33")
 
 [node name="TowerDefenseTile245" type="Sprite2D" parent="."]
-texture = ExtResource("1_t12l6")
+z_index = 4
+texture = ExtResource("2_kf1r5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2nkuh")

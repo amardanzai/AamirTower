@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://6c6kewqbkigy"]
 
 [ext_resource type="PackedScene" uid="uid://dedc4s5gs6k8v" path="res://Tiles/TileMap.tscn" id="1_25n6f"]
-[ext_resource type="Script" path="res://PathSpawner.gd" id="2_3vi2l"]
+[ext_resource type="PackedScene" uid="uid://bndefw8rncrqe" path="res://path_spawner.tscn" id="2_7cywc"]
 [ext_resource type="PackedScene" uid="uid://ddoeholnt2lip" path="res://ui.tscn" id="4_4jwic"]
 
 [sub_resource type="GDScript" id="GDScript_tiaqs"]
@@ -42,11 +42,7 @@ layer_0/tile_data = PackedInt32Array(0, 262144, 5, 1, 262144, 5, 2, 262144, 5, 3
 layer_1/name = "Layer 1"
 layer_1/tile_data = PackedInt32Array(786457, 983040, 5, 917533, 983040, 5, 1114131, 983040, 5, 1245207, 983040, 5, 1376274, 983040, 5, 720910, 983040, 5, 720915, 983040, 5, 851990, 983040, 5, 589832, 983040, 5, 589839, 983040, 5, 851979, 983040, 5, 1114121, 983040, 5, 852003, 983040, 5, 458775, 983040, 5)
 
-[node name="PathSpawner" type="Node2D" parent="."]
-script = ExtResource("2_3vi2l")
-
-[node name="Timer" type="Timer" parent="PathSpawner"]
-autostart = true
+[node name="PathSpawner" parent="." instance=ExtResource("2_7cywc")]
 
 [node name="Towers" type="Node2D" parent="."]
 script = SubResource("GDScript_bahdm")
@@ -55,5 +51,3 @@ script = SubResource("GDScript_bahdm")
 position = Vector2(1792, 1024)
 
 [node name="UI" parent="." instance=ExtResource("4_4jwic")]
-
-[connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner" method="_on_timer_timeout"]
