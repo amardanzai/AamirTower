@@ -37,6 +37,9 @@ func _on_tower_body_entered(body):
 	if "Solider A" in body.name:
 		var tempArray = []
 		currTargets = get_node("Tower").get_overlapping_bodies()
+	if "Solider 2" in body.name:
+		var tempArray = []
+		currTargets = get_node("Tower").get_overlapping_bodies()
 		for i in currTargets:
 			if "Solider" in i.name:
 				tempArray.append(i)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bndefw8rncrqe"]
+
+[ext_resource type="Script" path="res://PathSpawner.gd" id="1_3b4jx"]
+[ext_resource type="PackedScene" uid="uid://cd7wtoyhh6u6l" path="res://Stage 1 2.tscn" id="2_8kpge"]
+
+[node name="PathSpawner" type="Node2D"]
+script = ExtResource("1_3b4jx")
+path2 = ExtResource("2_8kpge")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
