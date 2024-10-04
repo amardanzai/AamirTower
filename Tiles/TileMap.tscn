@@ -376,5 +376,5 @@ sources/0 = SubResource("TileSetAtlasSource_46r7w")
 
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource("TileSet_f3aka")
-cell_quadrant_size = 64
+rendering_quadrant_size = 64
 format = 2
