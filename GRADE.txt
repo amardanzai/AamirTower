@@ -1,4 +1,4 @@
-Amir, I looked at all of the changes you made after you forked the original repository and this is all I could see.
+Aamir, I looked at all of the changes you made after you forked the original repository and this is all I could see.
 
 Random Range for Gold Generated
 Changed Starting Gold and Mob Speed/Health
