@@ -1,0 +1,8 @@
+Amir, I looked at all of the changes you made after you forked the original repository and this is all I could see.
+
+Random Range for Gold Generated
+Changed Starting Gold and Mob Speed/Health
+Added a second Mob that's functionally identical to the first Mob, and I helped you knock that out.
+
+
+If I've missed something or you think I'm being unfair, we can talk about it, but this seems relatively clear cut to me. If I rewind to the commit you started with, I already have a completed game. I don't know what else to do in this scenario other than a 0.
